@@ -1,0 +1,57 @@
+<!-- little bit of styling here for our list to be appearing mannerly in browser -->
+<style>
+    .list{
+        height: 150px;
+        width: 100%;
+        border: 1px solid rebeccapurple;
+        display: inline-flex;
+        justify-items: center;
+        align-items: center;
+    }
+</style>
+<p>Drag And Drop</p>
+<!-- real thing starts here -->
+<!-- 
+    1.the div which contains every thing is the div which 
+    2.the 2 div s inside that contains both of our list 
+    3.the div those 2 div contains is the data which will be manipulated
+ -->
+ <!-- Working of the cdk Drag and drop  -->
+ <!-- 
+     1.div contains cdkDropList will active the list to drop the item
+     2.div contains cdkdropList will contain the items dragable items
+     3.for transferring the items crossed to other list we need to use
+        (i)[cdkDropListData]="name of the array which is used in this list"
+        (ii)[cdkDropListConnectedTo]="to which this list is connected"
+        (iii)and a #tag_name for this list
+  -->
+  
+<div style="display:flex;">
+    <div cdkDropList
+        [cdkDropListData]="list"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="listB"
+        #listA="cdkDropList" 
+        style="width:25%;border:solid rebeccapurple 1px;">
+        <div cdkDrag *ngFor="let item of list" class="list">
+            {{item}}
+        </div>
+    </div>
+    <div cdkDropList
+        [cdkDropListData]="list2"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="listA"
+        #listB="cdkDropList"
+        style="width: 25%;border: solid blue 1px;">
+        <div cdkDrag *ngFor="let item of list2" class="list" >
+            {{item}}
+        </div>
+    </div>
+</div>
+
+<!-- simple drag and drop -->
+<div class="list" cdkDrag>
+    Drag me around
+</div>
+
+
