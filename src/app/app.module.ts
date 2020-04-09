@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { SelectDropDownModule } from 'ngx-select-dropdown';
 import {FormsModule} from '@angular/forms';
-import {CKEditorModule} from 'ng2-ckeditor'
+import {CKEditorModule} from 'ng2-ckeditor';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +34,7 @@ const routes: Routes = [
     DragDropModule,
     SelectDropDownModule,
     FormsModule,
-    CKEditorModule
+    CKEditorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

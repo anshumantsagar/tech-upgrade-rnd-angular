@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tech-upgrade-rnd';
+  element=document.documentElement;
+  fullscreen(){
+    if(this.element.requestFullscreen){
+      this.element.requestFullscreen()
+    }
+  }
 }

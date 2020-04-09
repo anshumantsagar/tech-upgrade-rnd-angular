@@ -3,9 +3,9 @@
 <h1>R & D Tech Upgrade Angular</h1>
 </div>
 <nav>
-  <a [routerLink]="['/dnd']" routerLinkActive="active" >Drag And Drop</a>
-  <a [routerLink]="['/dropdown']" routerLinkActive="active" >Dropdown</a>
-  <a [routerLink]="['/ckeditor']" routerLinkActive="active" >ckEditor</a>
+  <a [routerLink]="['/dnd']" routerLinkActive="active" style="margin: 10px;" >Drag And Drop</a>
+  <a [routerLink]="['/dropdown']" routerLinkActive="active" style="margin: 10px;">Dropdown</a>
+  <a [routerLink]="['/ckeditor']" routerLinkActive="active" style="margin: 10px;">ckEditor</a>
 </nav>
-
+<button type="button" style="margin: 10px;" (click)="fullscreen()">Fullscreen</button>
 <router-outlet></router-outlet>
