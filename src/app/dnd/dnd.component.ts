@@ -13,6 +13,7 @@ export class DndComponent implements OnInit {
   //below are the two arrays that are contains data to be dragged and dropped 
   list:Array<number> = [1,2,3,4,5,6,7,8,9,0] 
   list2:Array<number> = []
+  bindings:string = 'yes'
 
   drop(event: CdkDragDrop<number[]>){// function for detecting the drag and dropped
     if(event.previousContainer != event.container){//if condition will check if the data is moving from one list to another
