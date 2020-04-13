@@ -17,3 +17,30 @@
   nav a.active {
     color: #039be5;
   }
+
+  button {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  agm-map {
+    height: 600px;
+  }
+
+  agm-map {
+    height: 300px;
+  }
+  
+  
+  * {
+    font-family: Lato;
+  }
+  
+  a {
+    color: darkblue;
+  }
+
+  
