@@ -12,6 +12,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TagInputModule } from 'ngx-chips';
 import {MatChipsModule} from '@angular/material/chips';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 
 
@@ -26,6 +27,7 @@ import {GooglemapsComponent} from './google-maps/google-maps.component';
 import {MatmapComponent} from './mat-google-maps/mat-google-maps.component';
 import {DatetimeComponent} from './date-time-picker/date-time-picker.component';
 import {TaginputComponent} from './tag-input/tag-input.component'
+import {RecaptchaComponent} from './recaptcha/recaptcha.component'
 
 const routes: Routes = [
   {path:'dnd', component:DndComponent},
@@ -34,7 +36,8 @@ const routes: Routes = [
   {path:'googlemaps', component:GooglemapsComponent},
   {path:'matmaps', component:MatmapComponent},
   {path:'datetime', component:DatetimeComponent},
-  {path:'taginput', component:TaginputComponent}
+  {path:'taginput', component:TaginputComponent},
+  {path:'recaptcha', component:RecaptchaComponent}
 ];
 
 @NgModule({
@@ -46,7 +49,8 @@ const routes: Routes = [
     GooglemapsComponent,
     MatmapComponent,
     DatetimeComponent,
-    TaginputComponent
+    TaginputComponent,
+    RecaptchaComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -65,6 +69,7 @@ const routes: Routes = [
     TagInputModule,
     ReactiveFormsModule,
     MatChipsModule,
+    RecaptchaModule
 
   ],
   providers: [],
