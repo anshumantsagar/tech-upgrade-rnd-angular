@@ -13,9 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TagInputModule } from 'ngx-chips';
 import {MatChipsModule} from '@angular/material/chips';
 import { RecaptchaModule } from 'ng-recaptcha';
-
-
-
+import { ChartModule } from 'angular-highcharts';
 
 
 //components
@@ -26,8 +24,11 @@ import {CkeditorComponent} from './ckEditor/ckeditor.component';
 import {GooglemapsComponent} from './google-maps/google-maps.component';
 import {MatmapComponent} from './mat-google-maps/mat-google-maps.component';
 import {DatetimeComponent} from './date-time-picker/date-time-picker.component';
-import {TaginputComponent} from './tag-input/tag-input.component'
-import {RecaptchaComponent} from './recaptcha/recaptcha.component'
+import {TaginputComponent} from './tag-input/tag-input.component';
+import {RecaptchaComponent} from './recaptcha/recaptcha.component';
+import {ImagecropperComponent} from './image-cropper/image-cropper.component';
+import {ShowimagecropComponent} from './image-cropper/showimage.component';
+import {HighchartsComponent} from './highchart/highchart.component'
 
 const routes: Routes = [
   {path:'dnd', component:DndComponent},
@@ -37,7 +38,9 @@ const routes: Routes = [
   {path:'matmaps', component:MatmapComponent},
   {path:'datetime', component:DatetimeComponent},
   {path:'taginput', component:TaginputComponent},
-  {path:'recaptcha', component:RecaptchaComponent}
+  {path:'recaptcha', component:RecaptchaComponent},
+  {path:'cropimage', component:ShowimagecropComponent},
+  {path:'highchart', component:HighchartsComponent}
 ];
 
 @NgModule({
@@ -50,7 +53,10 @@ const routes: Routes = [
     MatmapComponent,
     DatetimeComponent,
     TaginputComponent,
-    RecaptchaComponent
+    RecaptchaComponent,
+    ImagecropperComponent,
+    ShowimagecropComponent,
+    HighchartsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -69,8 +75,8 @@ const routes: Routes = [
     TagInputModule,
     ReactiveFormsModule,
     MatChipsModule,
-    RecaptchaModule
-
+    RecaptchaModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
