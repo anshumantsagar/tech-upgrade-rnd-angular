@@ -28,13 +28,14 @@ import Cropper from "cropperjs";
   ]
 })
 export class ImagecropperComponent  { 
+    // code is from the tutorial but it is not hard to understand and this component will be use as a selector in othe component's HTML
     @ViewChild("image", { static: false })
     public imageElement: ElementRef;
 
     @Input("src")
-    public imageSource: string;
+    public imageSource: string;// source image
 
-    public imageDestination: string;
+    public imageDestination: string;// for the destination of the new image
     private cropper: Cropper;
 
     public constructor() {

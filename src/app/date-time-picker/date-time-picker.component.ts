@@ -11,7 +11,7 @@ import {Component,OnInit} from '@angular/core'
 
     `,
 })
-
+//date and time picker are not working in angular 9
 export class DatetimeComponent {
     date:string
     constructor(){}

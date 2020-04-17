@@ -14,8 +14,9 @@ import { Component, OnInit } from '@angular/core';
 export class RecaptchaComponent implements OnInit {
 
     constructor() { }
+    //just verfy the code with backend
     resolved(captchaResponse: string) {
-        console.log(`Resolved captcha with response: ${captchaResponse}`);
+        console.log(`Resolved captcha with response: String{captchaResponse}`);
     }
     ngOnInit() { }
 }

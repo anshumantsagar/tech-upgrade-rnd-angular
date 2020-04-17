@@ -30,6 +30,7 @@ import {ImagecropperComponent} from './image-cropper/image-cropper.component';
 import {ShowimagecropComponent} from './image-cropper/showimage.component';
 import {HighchartsComponent} from './highchart/highchart.component'
 
+//routes
 const routes: Routes = [
   {path:'dnd', component:DndComponent},
   {path:'dropdown', component:DropdownComponent},

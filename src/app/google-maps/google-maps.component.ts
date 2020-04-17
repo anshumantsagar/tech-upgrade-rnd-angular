@@ -3,6 +3,7 @@ import { Component,Input } from '@angular/core';
 @Component({
   selector: 'app-googlemaps',
   template: `
+
     <hr>
     <agm-map [latitude]="lat" [longitude]="lng">
       <agm-marker 
@@ -16,7 +17,7 @@ import { Component,Input } from '@angular/core';
         <strong>InfoWindow content</strong>
         </agm-info-window>
       </agm-marker>
-
+      <!--editable info circle to mark area-->
       <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
         [radius]="5000"
         [fillColor]="'maroon'"
@@ -45,6 +46,7 @@ export class GooglemapsComponent  {
     constructor(){
 
     }
+    //for getting the updated values from the marker
     markerDragEnd(newValue:any,event:any){
       console.log('nothing')
     }

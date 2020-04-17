@@ -13,6 +13,7 @@ import {Chart} from 'chart.js'
 })
 
 export class HighchartsComponent implements OnInit {
+    //data and configuration of the charts will be in these arrays
     LineChart=[];
     BarChart=[];
     PieChart=[];

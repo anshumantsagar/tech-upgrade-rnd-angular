@@ -28,7 +28,7 @@ import { Component,Input,ViewChild } from '@angular/core';
 export class CkeditorComponent  { 
     ckeditorContent:string
     throughFunctiom:string
-    ckeConfig = {
+    ckeConfig = {// configuration of the ck editor can be modified accordint ti the requirement
         allowedContent: false,
         forcePasteAsPlainText: true,
         font_names: 'Arial;Times New Roman;Verdana',
@@ -58,6 +58,7 @@ export class CkeditorComponent  {
         console.log(event)
         this.throughFunctiom = event
     }
+    //functions which can be used in the ckEditor found them in the doc 
     onEditorChange($event){}
     onReady($event){}
     onFocus($event){}

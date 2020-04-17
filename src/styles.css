@@ -30,11 +30,6 @@
     height: 600px;
   }
 
-  agm-map {
-    height: 300px;
-  }
-  
-  
   * {
     font-family: Lato;
   }
@@ -43,5 +38,4 @@
     color: darkblue;
   }
 
-  @import "~ng-pick-datetime/assets/style/picker.min.css";
   
