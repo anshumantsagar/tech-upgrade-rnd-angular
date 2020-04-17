@@ -3,7 +3,7 @@ import { Component,Input } from '@angular/core';
 @Component({
   selector: 'app-googlemaps',
   template: `
-
+    <!--check the style.scc-->
     <hr>
     <agm-map [latitude]="lat" [longitude]="lng">
       <agm-marker 

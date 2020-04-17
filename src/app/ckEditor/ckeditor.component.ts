@@ -28,7 +28,7 @@ import { Component,Input,ViewChild } from '@angular/core';
 export class CkeditorComponent  { 
     ckeditorContent:string
     throughFunctiom:string
-    ckeConfig = {// configuration of the ck editor can be modified accordint ti the requirement
+    ckeConfig = {// configuration of the ck editor can be modified according to the requirement
         allowedContent: false,
         forcePasteAsPlainText: true,
         font_names: 'Arial;Times New Roman;Verdana',
@@ -54,11 +54,10 @@ export class CkeditorComponent  {
   
     constructor() {}
 
-    onChange(event:any){
+    onChange(event:any){// just to see the type of input ckEditor gives
         console.log(event)
-        this.throughFunctiom = event
     }
-    //functions which can be used in the ckEditor found them in the doc 
+    //functions which can be used in the ckEditor you found them in the official doc 
     onEditorChange($event){}
     onReady($event){}
     onFocus($event){}

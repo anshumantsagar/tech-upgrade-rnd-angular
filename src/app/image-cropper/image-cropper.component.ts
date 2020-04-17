@@ -29,6 +29,7 @@ import Cropper from "cropperjs";
 })
 export class ImagecropperComponent  { 
     // code is from the tutorial but it is not hard to understand and this component will be use as a selector in othe component's HTML
+    //checkout the showimage.component.ts
     @ViewChild("image", { static: false })
     public imageElement: ElementRef;
 

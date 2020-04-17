@@ -22,7 +22,7 @@ export class DropdownComponent  {
     constructor(){
 
     }
-    getData(event:any){
+    getData(event:any){//for getting the data and check which type of data dropdown sends
         console.log(event)
         this.dataModel = event.value
         console.log(this.dataModel)
