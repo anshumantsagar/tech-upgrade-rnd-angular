@@ -13,7 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TagInputModule } from 'ngx-chips';
 import {MatChipsModule} from '@angular/material/chips';
 import { RecaptchaModule } from 'ng-recaptcha';
-import { ChartModule } from 'angular-highcharts';
+import { DndModule } from 'ngx-drag-drop';
+import {ChartModule} from 'angular-highcharts';
+// import { DateTimePickerModule} from 'ngx-datetime-picker';
+import {DpDatePickerModule} from 'ng2-date-picker';
+
+
 
 
 //components
@@ -28,7 +33,8 @@ import {TaginputComponent} from './tag-input/tag-input.component';
 import {RecaptchaComponent} from './recaptcha/recaptcha.component';
 import {ImagecropperComponent} from './image-cropper/image-cropper.component';
 import {ShowimagecropComponent} from './image-cropper/showimage.component';
-import {HighchartsComponent} from './highchart/highchart.component'
+import {HighchartsComponent} from './highchart/highchart.component';
+import {Dnd2Component} from './dnd2/dnd2.component'
 
 //routes
 const routes: Routes = [
@@ -41,7 +47,8 @@ const routes: Routes = [
   {path:'taginput', component:TaginputComponent},
   {path:'recaptcha', component:RecaptchaComponent},
   {path:'cropimage', component:ShowimagecropComponent},
-  {path:'highchart', component:HighchartsComponent}
+  {path:'highchart', component:HighchartsComponent},
+  {path:'dnd2', component:Dnd2Component}
 ];
 
 @NgModule({
@@ -57,7 +64,8 @@ const routes: Routes = [
     RecaptchaComponent,
     ImagecropperComponent,
     ShowimagecropComponent,
-    HighchartsComponent
+    HighchartsComponent,
+    Dnd2Component,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -68,8 +76,11 @@ const routes: Routes = [
     FormsModule,
     CKEditorModule,
     GoogleMapsModule,
+    // AgmCoreModule.forRoot(
+    //   {apiKey: 'AIzaSyAFgM81Qz-SwfTzUsr4F51AgDj0HdN88CQ'}
+    //   ),
     AgmCoreModule.forRoot(
-      {apiKey: 'AIzaSyAFgM81Qz-SwfTzUsr4F51AgDj0HdN88CQ'}
+      {apiKey: 'AIzaSyC--hI_zssAP9vxyKjLNhfUYivZghkaf1o',libraries:['places']}
       ),
     MatDatepickerModule,
     BrowserAnimationsModule,
@@ -77,7 +88,10 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatChipsModule,
     RecaptchaModule,
-    ChartModule
+    ChartModule,
+    DndModule,
+    // DateTimePickerModule
+    DpDatePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
