@@ -17,6 +17,9 @@ import { DndModule } from 'ngx-drag-drop';
 import {ChartModule} from 'angular-highcharts';
 // import { DateTimePickerModule} from 'ngx-datetime-picker';
 import {DpDatePickerModule} from 'ng2-date-picker';
+import { NgxSmoothDnDModule } from 'ngx-smooth-dnd';
+
+
 
 
 
@@ -34,7 +37,8 @@ import {RecaptchaComponent} from './recaptcha/recaptcha.component';
 import {ImagecropperComponent} from './image-cropper/image-cropper.component';
 import {ShowimagecropComponent} from './image-cropper/showimage.component';
 import {HighchartsComponent} from './highchart/highchart.component';
-import {Dnd2Component} from './dnd2/dnd2.component'
+import {Dnd2Component} from './dnd2/dnd2.component';
+import {DndthreeComponent} from './dnd3/dnd3.component'
 
 //routes
 const routes: Routes = [
@@ -48,7 +52,8 @@ const routes: Routes = [
   {path:'recaptcha', component:RecaptchaComponent},
   {path:'cropimage', component:ShowimagecropComponent},
   {path:'highchart', component:HighchartsComponent},
-  {path:'dnd2', component:Dnd2Component}
+  {path:'dnd2', component:Dnd2Component},
+  {path:'dnd3', component:DndthreeComponent}
 ];
 
 @NgModule({
@@ -66,6 +71,7 @@ const routes: Routes = [
     ShowimagecropComponent,
     HighchartsComponent,
     Dnd2Component,
+    DndthreeComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -91,7 +97,8 @@ const routes: Routes = [
     ChartModule,
     DndModule,
     // DateTimePickerModule
-    DpDatePickerModule
+    DpDatePickerModule,
+    NgxSmoothDnDModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

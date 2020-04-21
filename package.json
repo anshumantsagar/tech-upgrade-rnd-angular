@@ -34,6 +34,7 @@
     "ngx-chips": "^2.1.0",
     "ngx-drag-drop": "^2.0.0",
     "ngx-select-dropdown": "^1.4.2",
+    "ngx-smooth-dnd": "^0.4.1",
     "rxjs": "~6.5.4",
     "screenfull": "^5.0.2",
     "tslib": "^1.10.0",

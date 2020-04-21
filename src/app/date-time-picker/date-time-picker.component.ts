@@ -49,7 +49,7 @@ export class DatetimeComponent {
     locale: "de",
     format: "DD.MM.YYYY",
     monthFormat: "MMMM, YYYY",
-    firstDayOfWeek: "mo"
+    firstDayOfWeek: "su"
     };
 
     constructor(private fb: FormBuilder) {
