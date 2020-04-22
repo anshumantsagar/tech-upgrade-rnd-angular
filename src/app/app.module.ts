@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';  
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -18,6 +19,10 @@ import {ChartModule} from 'angular-highcharts';
 // import { DateTimePickerModule} from 'ngx-datetime-picker';
 import {DpDatePickerModule} from 'ng2-date-picker';
 import { NgxSmoothDnDModule } from 'ngx-smooth-dnd';
+import { ClickOutsideModule } from 'ng-click-outside';
+import {AutocompleteLibModule} from 'angular-ng-autocomplete';
+
+
 
 
 
@@ -38,7 +43,10 @@ import {ImagecropperComponent} from './image-cropper/image-cropper.component';
 import {ShowimagecropComponent} from './image-cropper/showimage.component';
 import {HighchartsComponent} from './highchart/highchart.component';
 import {Dnd2Component} from './dnd2/dnd2.component';
-import {DndthreeComponent} from './dnd3/dnd3.component'
+import {DndthreeComponent} from './dnd3/dnd3.component';
+import {ClickoutsideComponent} from './click-outside/click-outside.component';
+import {AutocompleteComponent} from './autocomplete/autocomplete.component'
+
 
 //routes
 const routes: Routes = [
@@ -53,7 +61,9 @@ const routes: Routes = [
   {path:'cropimage', component:ShowimagecropComponent},
   {path:'highchart', component:HighchartsComponent},
   {path:'dnd2', component:Dnd2Component},
-  {path:'dnd3', component:DndthreeComponent}
+  {path:'dnd3', component:DndthreeComponent},
+  {path:'clickoutside', component:ClickoutsideComponent},
+  {path:'autocomplete', component:AutocompleteComponent}
 ];
 
 @NgModule({
@@ -71,11 +81,14 @@ const routes: Routes = [
     ShowimagecropComponent,
     HighchartsComponent,
     Dnd2Component,
-    DndthreeComponent
+    DndthreeComponent,
+    ClickoutsideComponent,
+    AutocompleteComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     DragDropModule,
     SelectDropDownModule,
@@ -99,6 +112,8 @@ const routes: Routes = [
     // DateTimePickerModule
     DpDatePickerModule,
     NgxSmoothDnDModule,
+    ClickOutsideModule,
+    AutocompleteLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
